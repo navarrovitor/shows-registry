@@ -8,7 +8,7 @@ namespace shows_registry
     private string Title { get; set; }
     private string Description { get; set; }
     private int Year { get; set; }
-    private bool Erasen { get; set; }
+    private bool Deleted { get; set; }
     public Show(int id, Genre genre, string title, string description, int year)
     {
       this.Id = id;
@@ -16,7 +16,7 @@ namespace shows_registry
       this.Title = title;
       this.Description = description;
       this.Year = year;
-      this.Erasen = false;
+      this.Deleted = false;
     }
 
     public override string ToString()
@@ -26,7 +26,7 @@ namespace shows_registry
       returnMessage += "Title: " + this.Title + Environment.NewLine;
       returnMessage += "Description: " + this.Description + Environment.NewLine;
       returnMessage += "Year: " + this.Year + Environment.NewLine;
-      returnMessage += "Erasen: " + this.Erasen;
+      returnMessage += "Deleted: " + this.Deleted;
       return returnMessage;
     }
 
@@ -40,13 +40,13 @@ namespace shows_registry
       return this.Title;
     }
 
-    public bool returnErasen()
+    public bool returnDeleted()
     {
-      return this.Erasen;
+      return this.Deleted;
     }
     public void Delete()
     {
-      this.Erasen = true;
+      this.Deleted = true;
     }
 
   }
