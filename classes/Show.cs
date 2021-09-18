@@ -44,7 +44,7 @@ namespace shows_registry
     {
       return this.Erasen;
     }
-    public void Erase()
+    public void Delete()
     {
       this.Erasen = true;
     }
